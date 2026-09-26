@@ -1,36 +1,42 @@
-# Oto Yıkama Otomasyonu - Gizlilik Politikası & Aydınlatma Metni
+# Privacy Policy & User Data Deletion Instructions
+### Car Wash Automation & WhatsApp Cloud API Notification Service
 
-Bu repository, **Oto Yıkama Otomasyonu** sistemi ve **Meta WhatsApp Cloud API** entegrasyonu için yasal gizlilik politikasını (Privacy Policy), hizmet şartlarını ve kullanıcı verilerini silme yönergesini (User Data Deletion Instructions) barındırmaktadır.
+This repository hosts the official Privacy Policy and User Data Deletion Instructions for the **Car Wash Automation** system, integrating with the **Meta WhatsApp Cloud API**.
 
-Canlı web sitesi versiyonu: [https://semihcakir18.github.io/privacy-policy/](https://semihcakir18.github.io/privacy-policy/)
+🔗 **Live Website:** [https://semihcakir18.github.io/Privacy-Policy/](https://semihcakir18.github.io/Privacy-Policy/)  
+🔗 **Direct Data Deletion Anchor:** [https://semihcakir18.github.io/Privacy-Policy/#data-deletion](https://semihcakir18.github.io/Privacy-Policy/#data-deletion)
 
 ---
 
-## 1. Genel Bilgilendirme ve Kapsam
-İşbu Gizlilik Politikası, **Oto Yıkama Otomasyonu** ("Uygulama") tarafından işletilen oto yıkama işletme yönetim sistemi ve müşterilere araç durumlarını bildiren otomatik mesajlaşma (Meta WhatsApp Cloud API) hizmetlerinin kişisel verileri nasıl topladığını, kullandığını, sakladığını ve koruduğunu açıklamaktadır.
+## 1. Overview and Scope
+This Privacy Policy outlines how **Car Wash Automation** ("we", "our", or "us") collects, uses, and safeguards personal information when customers utilize our car wash service management platform and automated status notification service via **Meta WhatsApp Cloud API**.
 
-## 2. Toplanan Kişisel Veriler
-Uygulamamız yalnızca araç kabul, yıkama süreci takibi ve bildirim amacıyla gerekli olan asgari verileri işler:
-- **Kimlik ve İletişim:** Müşteri adı, soyadı, telefon numarası
-- **Araç Bilgileri:** Araç plakası, marka/model, araç tipi
-- **İşlem Verileri:** Hizmet paketi, tutar, ödeme tipi, servis durum aşaması (Sırada, Yıkamada, Hazır/Tamamlandı)
-- **Mesajlaşma Logları:** Otomatik bildirim gönderim zamanı ve iletim durumları
+## 2. Information We Collect
+We collect minimal information strictly required to deliver car wash services and notify customers:
+- **Contact Details:** Customer name and mobile phone number (for WhatsApp/SMS updates).
+- **Vehicle Information:** License plate, make, model, and vehicle category.
+- **Service Details:** Washing package, service fee, order status (*Queued*, *Washing*, *Completed/Ready*).
+- **Notification Logs:** Delivery status and timestamps of automated messages.
 
-## 3. Verilerin İşlenme Amaçları
-- Aracınızın durumu değiştikçe WhatsApp / SMS üzerinden anlık durum bilgilendirmesi göndermek
-- Hizmet bedeli ve kasa kayıtlarının tutulması
-- Müşteri servis takibi ve memnuniyetinin sağlanması
+## 3. Purpose of Processing
+- Dispatching real-time automated transactional notifications via WhatsApp Cloud API when vehicle status changes.
+- Operational record-keeping, order management, and accounting in the POS terminal.
+- Customer support and service quality improvement.
 
-## 4. WhatsApp Cloud API ve Üçüncü Taraflar
-- Bildirimler resmi **Meta Platforms, Inc. (WhatsApp Cloud API)** altyapısı ile TLS şifreli olarak iletilir.
-- Veritabanı ve yedekleme altyapısı olarak **Supabase Inc.** bulut servisleri kullanılmakta olup Row Level Security (RLS) ile korunmaktadır.
+## 4. Third-Party Services
+- **Meta Platforms, Inc. (WhatsApp Cloud API):** For encrypted delivery of transactional status messages.
+- **Supabase Inc.:** Cloud database hosting protected by Row Level Security (RLS) and JWT authentication.
 
-## 5. Kullanıcı Verilerinin Silinmesi (User Data Deletion Instructions)
-Kullanıcılar sistemde kayıtlı kişisel verilerinin (ad, telefon, plaka vb.) silinmesini herhangi bir gerekçe göstermeksizin talep edebilir:
-1. **E-posta İle:** [semihcakir04@gmail.com](mailto:semihcakir04@gmail.com) adresine *"Verilerimin Silinmesi Talebi"* konulu bir e-posta ileterek kayıtlı telefon ve plakanızı bildiriniz.
-2. Talebiniz **en geç 48 saat içerisinde** işleme alınarak tüm verileriniz kalıcı olarak silinecek ve tarafınıza teyit iletilecektir.
+## 5. User Data Deletion Instructions
+Customers have the full right to request the permanent deletion of their personal data:
+1. **By Email:** Send an email to [semihcakir04@gmail.com](mailto:semihcakir04@gmail.com) with the subject *"User Data Deletion Request"*, including your registered phone number and vehicle license plate.
+2. **In-Person:** Visit the service center and request immediate record deletion.
 
-## 6. İletişim
-- **Geliştirici / Veri Sorumlusu:** Semih Çakır
-- **E-posta:** semihcakir04@gmail.com
-- **Konum:** Türkiye
+All associated personal records, phone numbers, and messaging logs will be **permanently deleted within 48 hours**, followed by email confirmation.
+
+---
+
+## Contact Information
+- **Developer / Data Controller:** Semih Cakir
+- **Email:** [semihcakir04@gmail.com](mailto:semihcakir04@gmail.com)
+- **Location:** Turkey

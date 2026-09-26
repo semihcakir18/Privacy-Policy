@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="tr">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gizlilik Politikası ve Veri Güvenliği | Oto Yıkama Otomasyonu</title>
+    <title>Privacy Policy & User Data Deletion | Car Wash Automation</title>
     <style>
         :root {
             --primary-color: #2563eb;
@@ -34,9 +34,38 @@
         header {
             background: linear-gradient(135deg, #1e3a8a 0%, #2563eb 100%);
             color: #ffffff;
-            padding: 50px 20px;
+            padding: 50px 20px 40px 20px;
             text-align: center;
             box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .lang-switch {
+            position: absolute;
+            top: 18px;
+            right: 20px;
+            display: flex;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 4px;
+            border-radius: 8px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: #ffffff;
+            color: var(--primary-color);
         }
 
         header h1 {
@@ -47,7 +76,7 @@
 
         header p {
             font-size: 1.1rem;
-            opacity: 0.9;
+            opacity: 0.92;
             max-width: 650px;
             margin: 0 auto;
         }
@@ -79,18 +108,12 @@
             padding-bottom: 8px;
         }
 
-        h3 {
-            font-size: 1.15rem;
-            margin: 20px 0 10px 0;
-            color: var(--text-dark);
-        }
-
         p {
             margin-bottom: 14px;
             color: var(--text-dark);
         }
 
-        ul {
+        ul, ol {
             margin: 10px 0 16px 24px;
             color: var(--text-dark);
         }
@@ -154,12 +177,27 @@
             text-decoration: underline;
         }
 
+        .lang-section {
+            display: block;
+        }
+
+        .lang-section.hidden {
+            display: none;
+        }
+
         @media (max-width: 600px) {
+            header {
+                padding-top: 65px;
+            }
             header h1 {
                 font-size: 1.7rem;
             }
             .card {
                 padding: 22px;
+            }
+            .lang-switch {
+                top: 12px;
+                right: 12px;
             }
         }
     </style>
@@ -167,103 +205,222 @@
 <body>
 
     <header>
-        <h1>Gizlilik Politikası ve Aydınlatma Metni</h1>
-        <p>Oto Yıkama Otomasyonu & WhatsApp Bildirim Sistemi</p>
+        <div class="lang-switch">
+            <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">English</button>
+            <button class="lang-btn" id="btn-tr" onclick="setLanguage('tr')">Türkçe</button>
+        </div>
+        <h1 id="header-title">Privacy Policy & Terms of Service</h1>
+        <p id="header-desc">Car Wash Management System & WhatsApp Cloud API Notification Service</p>
     </header>
 
     <div class="container">
         
-        <div class="card">
-            <span class="badge">Son Güncelleme: 26 Eylül 2026</span>
-            <h2>1. Genel Bilgilendirme ve Kapsam</h2>
-            <p>
-                İşbu Gizlilik Politikası, <strong>Oto Yıkama Otomasyonu</strong> ("Uygulama", "Biz") tarafından işletilen oto yıkama işletme yönetim sistemi ve müşterilere araç durumlarını bildiren otomatik mesajlaşma (Meta WhatsApp Cloud API) hizmetlerinin kişisel verileri nasıl topladığını, kullandığını, sakladığını ve koruduğunu açıklamaktadır.
-            </p>
-            <p>
-                Hizmetlerimizi kullanarak ve oto yıkama hizmet kaydı oluşturarak, bu politikada belirtilen veri işleme esaslarını kabul etmiş sayılırsınız.
-            </p>
-        </div>
-
-        <div class="card">
-            <h2>2. Toplanan Kişisel Veriler</h2>
-            <p>Uygulamamız yalnızca araç kabul, yıkama süreci takibi ve bildirim amacıyla gerekli olan asgari verileri işler:</p>
-            <ul>
-                <li><strong>Kimlik ve İletişim Bilgileri:</strong> Müşteri adı, soyadı ve cep telefonu numarası.</li>
-                <li><strong>Araç Bilgileri:</strong> Araç plakası, araç markası/modeli ve araç tipi (binek araç, taksi vb.).</li>
-                <li><strong>İşlem ve Hizmet Verileri:</strong> Seçilen yıkama/temizlik paketi, hizmet tutarı, ödeme yöntemi, işlem tarihi ve araç servis aşaması (Sırada, Yıkamada, Hazır/Tamamlandı).</li>
-                <li><strong>İletişim Kayıtları:</strong> Müşteriye iletilen otomatik durum bilgilendirme mesajlarının gönderim zamanı ve teslim durumu logları.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>3. Verilerin İşlenme Amaçları ve Hukuki Sebebi</h2>
-            <p>Kişisel verileriniz, 6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve uluslararası veri koruma standartlarına uygun olarak aşağıdaki amaçlarla işlenmektedir:</p>
-            <ul>
-                <li>Aracınızın oto yıkama sırasına alınması, yıkama işlemine başlanması ve teslimata hazır hale gelmesi süreçlerinde <strong>WhatsApp veya SMS aracılığıyla otomatik bilgilendirme bildirimlerinin iletilmesi</strong>,</li>
-                <li>Hizmet bedelinin tahsil edilmesi ve kasa/finans kayıtlarının tutulması,</li>
-                <li>Müşteri memnuniyetinin sağlanması ve olası servis taleplerinin çözümlenmesi,</li>
-                <li>İşletme sahibi tarafından tanımlanan kampanya ve avantajlardan (onayınız dahilinde) haberdar edilmeniz.</li>
-            </ul>
-        </div>
-
-        <div class="card">
-            <h2>4. WhatsApp Cloud API ve Üçüncü Taraf Hizmet Sağlayıcılar</h2>
-            <div class="info-box">
-                <strong>WhatsApp Cloud API Kullanımı:</strong> Uygulamamız, müşterilerin araç durumunu anlık olarak öğrenebilmesi amacıyla resmi <strong>Meta Platforms, Inc. (WhatsApp Cloud API)</strong> altyapısını kullanmaktadır.
+        <!-- ================= ENGLISH SECTION ================= -->
+        <div id="content-en" class="lang-section">
+            <div class="card">
+                <span class="badge">Last Updated: September 26, 2026</span>
+                <h2>1. Overview and Scope</h2>
+                <p>
+                    This Privacy Policy describes how <strong>Car Wash Automation</strong> ("Application", "we", "our", or "us") collects, uses, stores, and protects personal data obtained from customers using our car wash service management system and automated notification platform (integrated with the official <strong>Meta WhatsApp Cloud API</strong>).
+                </p>
+                <p>
+                    By registering your vehicle for service or using our car wash facilities, you acknowledge and agree to the practices outlined in this Privacy Policy.
+                </p>
             </div>
-            <p>
-                Mesaj gönderimi sırasında yalnızca mesajın iletilmesi için zorunlu olan telefon numarası, müşteri adı ve araç plakası Meta sunucularına güvenli (HTTPS/TLS) şifreleme protokolleriyle iletilir. Meta, bu verileri yalnızca mesajın alıcıya ulaştırılması amacıyla işler.
-            </p>
-            <p>
-                Veritabanı ve yedekleme altyapısı olarak <strong>Supabase Inc.</strong> bulut hizmetleri kullanılmakta olup, tüm veritabanı tabloları Row Level Security (RLS) politikaları ve JWT yetkilendirmesi ile güvence altına alınmıştır.
-            </p>
-        </div>
 
-        <div class="card">
-            <h2>5. Veri Güvenliği ve Saklama</h2>
-            <p>
-                Kişisel verilerinizin yetkisiz erişime, kayba veya kötüye kullanıma karşı korunması için endüstri standardı güvenlik önlemleri alınmaktadır:
-            </p>
-            <ul>
-                <li>Uçtan uca şifreli SSL/TLS veri iletimi,</li>
-                <li>Veritabanı düzeyinde Row Level Security (RLS) erişim kısıtlamaları,</li>
-                <li>Yetkisiz personelin müşteri iletişim bilgilerine toplu erişimini engelleyen rol ve anahtar yönetimi.</li>
-            </ul>
-        </div>
-
-        <div class="card" id="data-deletion">
-            <h2>6. Kullanıcı Verilerinin Silinmesi Yönergesi (Data Deletion Instructions)</h2>
-            <div class="highlight-box">
-                <strong>Veri Silme Talebi:</strong> Müşterilerimiz ve kullanıcılarımız, sistemimizde kayıtlı olan kişisel verilerinin (ad, telefon, plaka ve işlem geçmişi) silinmesini herhangi bir gerekçe göstermeksizin talep etme hakkına sahiptir.
+            <div class="card">
+                <h2>2. Information We Collect</h2>
+                <p>We only collect and process minimal data necessary to deliver car wash services and communicate real-time progress updates to vehicle owners:</p>
+                <ul>
+                    <li><strong>Contact & Identity Data:</strong> Customer full name and mobile phone number (used for WhatsApp/SMS notifications).</li>
+                    <li><strong>Vehicle Information:</strong> License plate number, vehicle make/model, and vehicle classification (e.g., standard vehicle, commercial taxi).</li>
+                    <li><strong>Service & Operational Details:</strong> Selected washing package, service fee, payment method, order timestamps, and service status stages (<em>Queued</em>, <em>Washing</em>, <em>Ready/Completed</em>).</li>
+                    <li><strong>Messaging Logs:</strong> Delivery timestamps and status receipts of automated transactional notifications.</li>
+                </ul>
             </div>
-            <p>Verilerinizin sistemlerimizden kalıcı olarak silinmesi için aşağıdaki adımları izleyebilirsiniz:</p>
-            <ol style="margin-left: 24px; margin-bottom: 16px;">
-                <li><strong>E-posta Gönderimi:</strong> Kayıtlı telefon numaranızı ve araç plakanızı belirterek <a href="mailto:semihcakir04@gmail.com">semihcakir04@gmail.com</a> adresine <em>"Verilerimin Silinmesi Talebi"</em> konulu bir e-posta iletiniz.</li>
-                <li><strong>İşletme İçi Başvuru:</strong> Oto yıkama hizmeti aldığınız işletme merkezine şahsen başvurarak numaranızın sistemden kaldırılmasını talep edebilirsiniz.</li>
-            </ol>
-            <p>
-                Talebiniz bize ulaştıktan sonra kimlik doğrulaması tamamlanarak <strong>en geç 48 saat içerisinde</strong> tüm iletişim bilgileriniz, işlem geçmişiniz ve aktif bildirim kayıtlarınız veritabanlarımızdan geri döndürülemez şekilde silinir ve tarafınıza onay bilgisi verilir.
-            </p>
+
+            <div class="card">
+                <h2>3. How We Use Your Information</h2>
+                <p>We process collected data exclusively for legitimate business purposes:</p>
+                <ul>
+                    <li><strong>Automated Service Notifications:</strong> Sending automated real-time status updates via WhatsApp Cloud API or SMS when your vehicle enters the queue, begins washing, and is ready for pickup.</li>
+                    <li><strong>Order & Accounting Management:</strong> Recording billing, payment status, and order reconciliation in our POS system.</li>
+                    <li><strong>Customer Support:</strong> Resolving customer inquiries and ensuring high-quality service delivery.</li>
+                    <li><strong>Promotional Messages (Optional):</strong> Providing periodic promotional offers and discounts only if the customer has consented to receive marketing updates.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>4. Third-Party Integrations & Subprocessors</h2>
+                <div class="info-box">
+                    <strong>Official WhatsApp Cloud API:</strong> Our platform integrates directly with <strong>Meta Platforms, Inc. (WhatsApp Cloud API)</strong> to deliver transactional status messages.
+                </div>
+                <p>
+                    When dispatching notifications, only essential data (recipient phone number, customer name, and license plate number) is securely transmitted to Meta's servers using industry-standard TLS encryption. Meta handles this information in accordance with its Business Data Processing Terms.
+                </p>
+                <p>
+                    Database hosting and encrypted data sync are powered by <strong>Supabase Inc.</strong>, protected by strict Row Level Security (RLS) policies, JWT device authentication, and restricted API credentials.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>5. Data Security and Retention</h2>
+                <p>We implement rigorous technical and organizational safeguards to protect your personal information:</p>
+                <ul>
+                    <li>All communications and network transfers occur over encrypted SSL/TLS (HTTPS) channels.</li>
+                    <li>Database records are secured behind strict Row Level Security (RLS) rules and authenticated access tokens.</li>
+                    <li>Personal data is retained only as long as necessary for service fulfillment, accounting records, or legal compliance.</li>
+                </ul>
+            </div>
+
+            <div class="card" id="data-deletion">
+                <h2>6. User Data Deletion Instructions</h2>
+                <div class="highlight-box">
+                    <strong>Right to Erasure:</strong> Customers and vehicle owners have the unconditional right to request the permanent deletion of their personal information (name, phone number, vehicle plate, and history) from our systems at any time.
+                </div>
+                <p>To request the complete deletion of your data, you can choose either of the following methods:</p>
+                <ol>
+                    <li>
+                        <strong>Via Email:</strong> Send an email to <a href="mailto:semihcakir04@gmail.com">semihcakir04@gmail.com</a> with the subject line <em>"User Data Deletion Request"</em>. Please specify your registered phone number and vehicle license plate.
+                    </li>
+                    <li>
+                        <strong>In-Person Request:</strong> Visit the car wash service center in person and request the immediate removal of your customer record from the operator system.
+                    </li>
+                </ol>
+                <p>
+                    Upon receiving your request and verifying your identity, your records, messaging logs, and contact details will be <strong>permanently deleted within 48 hours</strong>, and a written confirmation will be provided to you.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>7. Contact Information</h2>
+                <p>For any questions, concerns, or data protection inquiries regarding this Privacy Policy, please reach out to us:</p>
+                <div class="contact-card">
+                    <p><strong>Application:</strong> Car Wash Management System & WhatsApp Service</p>
+                    <p><strong>Developer & Data Controller:</strong> Semih Cakir</p>
+                    <p><strong>Email:</strong> <a href="mailto:semihcakir04@gmail.com">semihcakir04@gmail.com</a></p>
+                    <p><strong>Location:</strong> Turkey</p>
+                </div>
+            </div>
         </div>
 
-        <div class="card">
-            <h2>7. İletişim Bilgileri</h2>
-            <p>
-                Gizlilik politikamız, kişisel verilerinizin işlenmesi veya veri silme taleplerinizle ilgili her türlü soru ve geri bildirim için bizimle iletişime geçebilirsiniz:
-            </p>
-            <div class="contact-card">
-                <p><strong>Uygulama / Hizmet:</strong> Oto Yıkama Otomasyonu & WhatsApp Bildirim Sistemi</p>
-                <p><strong>Geliştirici / Veri Sorumlusu:</strong> Semih Çakır</p>
-                <p><strong>E-posta:</strong> <a href="mailto:semihcakir04@gmail.com">semihcakir04@gmail.com</a></p>
-                <p><strong>Konum:</strong> Türkiye</p>
+        <!-- ================= TÜRKÇE SECTION ================= -->
+        <div id="content-tr" class="lang-section hidden">
+            <div class="card">
+                <span class="badge">Son Güncelleme: 26 Eylül 2026</span>
+                <h2>1. Genel Bilgilendirme ve Kapsam</h2>
+                <p>
+                    İşbu Gizlilik Politikası, <strong>Oto Yıkama Otomasyonu</strong> ("Uygulama", "Biz") tarafından işletilen oto yıkama işletme yönetim sistemi ve müşterilere araç durumlarını bildiren otomatik mesajlaşma (Meta WhatsApp Cloud API) hizmetlerinin kişisel verileri nasıl topladığını, kullandığını, sakladığını ve koruduğunu açıklamaktadır.
+                </p>
+                <p>
+                    Hizmetlerimizi kullanarak ve oto yıkama hizmet kaydı oluşturarak, bu politikada belirtilen veri işleme esaslarını kabul etmiş sayılırsınız.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>2. Toplanan Kişisel Veriler</h2>
+                <p>Uygulamamız yalnızca araç kabul, yıkama süreci takibi ve bildirim amacıyla gerekli olan asgari verileri işler:</p>
+                <ul>
+                    <li><strong>Kimlik ve İletişim Bilgileri:</strong> Müşteri adı, soyadı ve cep telefonu numarası.</li>
+                    <li><strong>Araç Bilgileri:</strong> Araç plakası, araç markası/modeli ve araç tipi (binek araç, taksi vb.).</li>
+                    <li><strong>İşlem ve Hizmet Verileri:</strong> Seçilen yıkama/temizlik paketi, hizmet tutarı, ödeme yöntemi, işlem tarihi ve araç servis aşaması (Sırada, Yıkamada, Hazır/Tamamlandı).</li>
+                    <li><strong>İletişim Kayıtları:</strong> Müşteriye iletilen otomatik durum bilgilendirme mesajlarının gönderim zamanı ve teslim durumu logları.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>3. Verilerin İşlenme Amaçları</h2>
+                <p>Kişisel verileriniz, KVKK ve uluslararası veri koruma standartlarına uygun olarak aşağıdaki amaçlarla işlenmektedir:</p>
+                <ul>
+                    <li>Aracınızın oto yıkama sırasına alınması, yıkama işlemine başlanması ve teslimata hazır hale gelmesi süreçlerinde <strong>WhatsApp veya SMS aracılığıyla otomatik bilgilendirme bildirimlerinin iletilmesi</strong>,</li>
+                    <li>Hizmet bedelinin tahsil edilmesi ve kasa/finans kayıtlarının tutulması,</li>
+                    <li>Müşteri memnuniyetinin sağlanması ve olası servis taleplerinin çözümlenmesi,</li>
+                    <li>İşletme sahibi tarafından tanımlanan kampanya ve avantajlardan (onayınız dahilinde) haberdar edilmeniz.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>4. WhatsApp Cloud API ve Üçüncü Taraf Hizmet Sağlayıcılar</h2>
+                <div class="info-box">
+                    <strong>WhatsApp Cloud API Kullanımı:</strong> Uygulamamız, müşterilerin araç durumunu anlık olarak öğrenebilmesi amacıyla resmi <strong>Meta Platforms, Inc. (WhatsApp Cloud API)</strong> altyapısını kullanmaktadır.
+                </div>
+                <p>
+                    Mesaj gönderimi sırasında yalnızca mesajın iletilmesi için zorunlu olan telefon numarası, müşteri adı ve araç plakası Meta sunucularına güvenli (HTTPS/TLS) şifreleme protokolleriyle iletilir. Meta, bu verileri yalnızca mesajın alıcıya ulaştırılması amacıyla işler.
+                </p>
+                <p>
+                    Veritabanı ve yedekleme altyapısı olarak <strong>Supabase Inc.</strong> bulut hizmetleri kullanılmakta olup, tüm veritabanı tabloları Row Level Security (RLS) politikaları ve JWT yetkilendirmesi ile güvence altına alınmıştır.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>5. Veri Güvenliği ve Saklama</h2>
+                <p>Kişisel verilerinizin yetkisiz erişime, kayba veya kötüye kullanıma karşı korunması için endüstri standardı güvenlik önlemleri alınmaktadır:</p>
+                <ul>
+                    <li>Uçtan uca şifreli SSL/TLS veri iletimi,</li>
+                    <li>Veritabanı düzeyinde Row Level Security (RLS) erişim kısıtlamaları,</li>
+                    <li>Yetkisiz personelin müşteri iletişim bilgilerine toplu erişimini engelleyen rol ve anahtar yönetimi.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>6. Kullanıcı Verilerinin Silinmesi Yönergesi (Data Deletion Instructions)</h2>
+                <div class="highlight-box">
+                    <strong>Veri Silme Talebi:</strong> Müşterilerimiz, sistemimizde kayıtlı olan kişisel verilerinin (ad, telefon, plaka ve işlem geçmişi) silinmesini herhangi bir gerekçe göstermeksizin talep etme hakkına sahiptir.
+                </div>
+                <p>Verilerinizin sistemlerimizden kalıcı olarak silinmesi için aşağıdaki adımları izleyebilirsiniz:</p>
+                <ol>
+                    <li><strong>E-posta Gönderimi:</strong> Kayıtlı telefon numaranızı ve araç plakanızı belirterek <a href="mailto:semihcakir04@gmail.com">semihcakir04@gmail.com</a> adresine <em>"Verilerimin Silinmesi Talebi"</em> konulu bir e-posta iletiniz.</li>
+                    <li><strong>İşletme İçi Başvuru:</strong> Oto yıkama hizmeti aldığınız işletme merkezine şahsen başvurarak numaranızın sistemden kaldırılmasını talep edebilirsiniz.</li>
+                </ol>
+                <p>
+                    Talebiniz bize ulaştıktan sonra kimlik doğrulaması tamamlanarak <strong>en geç 48 saat içerisinde</strong> tüm iletişim bilgileriniz ve işlem geçmişiniz veritabanlarımızdan geri döndürülemez şekilde silinir ve onay iletilir.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>7. İletişim Bilgileri</h2>
+                <p>Gizlilik politikamız ve veri silme taleplerinizle ilgili her türlü soru için bizimle iletişime geçebilirsiniz:</p>
+                <div class="contact-card">
+                    <p><strong>Uygulama:</strong> Oto Yıkama Otomasyonu & WhatsApp Bildirim Sistemi</p>
+                    <p><strong>Geliştirici / Veri Sorumlusu:</strong> Semih Çakır</p>
+                    <p><strong>E-posta:</strong> <a href="mailto:semihcakir04@gmail.com">semihcakir04@gmail.com</a></p>
+                    <p><strong>Konum:</strong> Türkiye</p>
+                </div>
             </div>
         </div>
 
     </div>
 
     <footer>
-        <p>&copy; 2026 Oto Yıkama Otomasyonu. Tüm hakları saklıdır.</p>
+        <p>&copy; 2026 Car Wash Automation. All rights reserved.</p>
     </footer>
+
+    <script>
+        function setLanguage(lang) {
+            const contentEn = document.getElementById('content-en');
+            const contentTr = document.getElementById('content-tr');
+            const btnEn = document.getElementById('btn-en');
+            const btnTr = document.getElementById('btn-tr');
+            const headerTitle = document.getElementById('header-title');
+            const headerDesc = document.getElementById('header-desc');
+
+            if (lang === 'tr') {
+                contentEn.classList.add('hidden');
+                contentTr.classList.remove('hidden');
+                btnEn.classList.remove('active');
+                btnTr.classList.add('active');
+                headerTitle.textContent = 'Gizlilik Politikası ve Aydınlatma Metni';
+                headerDesc.textContent = 'Oto Yıkama Otomasyonu & WhatsApp Bildirim Sistemi';
+            } else {
+                contentTr.classList.add('hidden');
+                contentEn.classList.remove('hidden');
+                btnTr.classList.remove('active');
+                btnEn.classList.add('active');
+                headerTitle.textContent = 'Privacy Policy & Terms of Service';
+                headerDesc.textContent = 'Car Wash Management System & WhatsApp Cloud API Notification Service';
+            }
+        }
+    </script>
 
 </body>
 </html>
