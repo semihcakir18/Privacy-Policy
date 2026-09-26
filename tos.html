@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms of Service | Car Wash Automation</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-hover: #1d4ed8;
+            --text-dark: #1e293b;
+            --text-muted: #64748b;
+            --bg-light: #f8fafc;
+            --card-bg: #ffffff;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.7;
+            padding: 0;
+            margin: 0;
+        }
+
+        header {
+            background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+            color: #ffffff;
+            padding: 50px 20px 40px 20px;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            position: relative;
+        }
+
+        .nav-links {
+            position: absolute;
+            top: 18px;
+            left: 20px;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.25);
+            text-decoration: none;
+        }
+
+        .lang-switch {
+            position: absolute;
+            top: 18px;
+            right: 20px;
+            display: flex;
+            gap: 8px;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 4px;
+            border-radius: 8px;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: #ffffff;
+            padding: 6px 14px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .lang-btn.active {
+            background: #ffffff;
+            color: var(--primary-color);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            opacity: 0.92;
+            max-width: 650px;
+            margin: 0 auto;
+        }
+
+        .container {
+            max-width: 860px;
+            margin: 40px auto;
+            padding: 0 20px 60px 20px;
+        }
+
+        .card {
+            background-color: var(--card-bg);
+            border-radius: 14px;
+            border: 1px solid var(--border-color);
+            padding: 35px;
+            margin-bottom: 25px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+        }
+
+        h2 {
+            font-size: 1.45rem;
+            color: var(--primary-color);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            border-bottom: 2px solid #eff6ff;
+            padding-bottom: 8px;
+        }
+
+        p {
+            margin-bottom: 14px;
+            color: var(--text-dark);
+        }
+
+        ul, ol {
+            margin: 10px 0 16px 24px;
+            color: var(--text-dark);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .badge {
+            display: inline-block;
+            background-color: #dbeafe;
+            color: #1e40af;
+            padding: 4px 10px;
+            border-radius: 6px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        .info-box {
+            background-color: #eff6ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 16px 20px;
+            border-radius: 6px;
+            margin: 18px 0;
+            font-size: 0.95rem;
+        }
+
+        .contact-card {
+            background-color: #f1f5f9;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 15px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border-color);
+            background-color: #ffffff;
+        }
+
+        a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .lang-section {
+            display: block;
+        }
+
+        .lang-section.hidden {
+            display: none;
+        }
+
+        @media (max-width: 600px) {
+            header {
+                padding-top: 75px;
+            }
+            .nav-links {
+                top: 12px;
+                left: 12px;
+            }
+            .lang-switch {
+                top: 12px;
+                right: 12px;
+            }
+            header h1 {
+                font-size: 1.7rem;
+            }
+            .card {
+                padding: 22px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-links">
+            <a href="index.html" class="nav-link">&larr; Privacy Policy</a>
+        </div>
+        <div class="lang-switch">
+            <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">English</button>
+            <button class="lang-btn" id="btn-tr" onclick="setLanguage('tr')">Türkçe</button>
+        </div>
+        <h1 id="header-title">Terms of Service</h1>
+        <p id="header-desc">Car Wash Management System & Automated Notification Services</p>
+    </header>
+
+    <div class="container">
+        
+        <!-- ================= ENGLISH SECTION ================= -->
+        <div id="content-en" class="lang-section">
+            <div class="card">
+                <span class="badge">Last Updated: September 26, 2026</span>
+                <h2>1. Acceptance of Terms</h2>
+                <p>
+                    These Terms of Service ("Terms") govern your use of the services, applications, and automated messaging infrastructure provided by <strong>Car Wash Automation</strong> ("Service", "we", "our", or "us").
+                </p>
+                <p>
+                    By registering a vehicle for car wash service, providing your phone number, or receiving automated messages from our system, you agree to be bound by these Terms and our <a href="index.html">Privacy Policy</a>. If you do not agree with any part of these Terms, you must notify the service operator and refrain from using our automated notification services.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>2. Description of Services</h2>
+                <p>Car Wash Automation provides a comprehensive operational platform designed to streamline vehicle intake, service queue management, and automated status communications:</p>
+                <ul>
+                    <li>Vehicle intake and service package management (Exterior, Interior, Detailed Wash, etc.).</li>
+                    <li>Real-time automated transaction and status updates sent via the official <strong>Meta WhatsApp Cloud API</strong> and SMS.</li>
+                    <li>Order status tracking across <em>Queued</em>, <em>Washing</em>, and <em>Completed/Ready for Pickup</em> phases.</li>
+                    <li>Receipt generation and POS transaction accounting.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>3. Automated Messaging & WhatsApp Communications</h2>
+                <div class="info-box">
+                    <strong>Transaction Notifications:</strong> By providing your mobile telephone number during vehicle intake, you consent to receive automated operational notifications via WhatsApp or SMS regarding your vehicle's progress and completion status.
+                </div>
+                <ul>
+                    <li><strong>Operational Scope:</strong> Messages are strictly informational and transaction-oriented (e.g., "Your vehicle with plate [34ABC123] is ready for pickup").</li>
+                    <li><strong>Standard Rates:</strong> We do not charge fees for receiving status updates; however, standard data and carrier rates may apply based on your mobile plan.</li>
+                    <li><strong>Opt-Out:</strong> Customers may opt out of receiving automated notifications at any time by notifying the staff upon vehicle drop-off or replying with "STOP" / contacting us at <a href="mailto:semihcakir04@gmail.com">semihcakir04@gmail.com</a>.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>4. Customer Responsibilities</h2>
+                <p>As a service user and vehicle owner, you agree to:</p>
+                <ul>
+                    <li>Provide accurate and valid contact details (phone number and license plate number).</li>
+                    <li>Inspect your vehicle prior to leaving the car wash premises.</li>
+                    <li>Collect personal belongings, valuables, and cash from the vehicle before handing over the keys.</li>
+                    <li>Pick up your vehicle within a reasonable timeframe once the completion notification has been delivered.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>5. Limitation of Liability</h2>
+                <p>
+                    While we take the highest standard of care in washing and handling customer vehicles:
+                </p>
+                <ul>
+                    <li>We are not responsible for pre-existing scratches, paint chips, dents, or loose trim damaged by normal cleaning processes.</li>
+                    <li>Valuables left inside the vehicle remain the sole responsibility of the vehicle owner.</li>
+                    <li>We do not guarantee uninterrupted or error-free delivery of WhatsApp/SMS messages due to potential third-party network, telecommunications, or Meta infrastructure outages.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>6. Intellectual Property & Service Modifications</h2>
+                <p>
+                    All software, interface designs, trade names, and automated workflow logic used in Car Wash Automation remain the exclusive intellectual property of the developer. We reserve the right to modify, suspend, or update features of the service at any time without prior notice.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>7. Contact Information</h2>
+                <p>For inquiries, complaints, or feedback regarding these Terms of Service, please contact:</p>
+                <div class="contact-card">
+                    <p><strong>Service Provider:</strong> Car Wash Automation</p>
+                    <p><strong>Operator & Developer:</strong> Semih Cakir</p>
+                    <p><strong>Email:</strong> <a href="mailto:semihcakir04@gmail.com">semihcakir04@gmail.com</a></p>
+                    <p><strong>Location:</strong> Turkey</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- ================= TÜRKÇE SECTION ================= -->
+        <div id="content-tr" class="lang-section hidden">
+            <div class="card">
+                <span class="badge">Son Güncelleme: 26 Eylül 2026</span>
+                <h2>1. Şartların Kabulü</h2>
+                <p>
+                    İşbu Hizmet Şartları ("Şartlar"), <strong>Oto Yıkama Otomasyonu</strong> ("Hizmet", "Biz") tarafından sunulan oto yıkama yönetim sistemi ve otomatik bilgilendirme altyapısının kullanım koşullarını belirler.
+                </p>
+                <p>
+                    Hizmetlerimizden yararlanarak, araç teslim kaydı oluşturarak veya sistemimizden otomatik durum mesajları alarak bu Şartları ve <a href="index.html">Gizlilik Politikamızı</a> kabul etmiş sayılırsınız.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>2. Sunulan Hizmetlerin Tanımı</h2>
+                <p>Oto Yıkama Otomasyonu aşağıdaki hizmetleri sağlamaktadır:</p>
+                <ul>
+                    <li>Araç kabul, yıkama paketi seçimi ve servis sırası yönetimi,</li>
+                    <li>Resmi <strong>Meta WhatsApp Cloud API</strong> ve SMS üzerinden araç durumuna ilişkin (Sırada, Yıkamada, Hazır) gerçek zamanlı otomatik bildirimler,</li>
+                    <li>Kasa, ödeme ve fiş kayıtlarının tutulması.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>3. Otomatik Mesajlaşma ve WhatsApp Bildirimleri</h2>
+                <div class="info-box">
+                    <strong>İşlem Bildirimleri:</strong> Araç kabul sırasında telefon numaranızı belirterek, aracınızın işlem durumuyla ilgili WhatsApp ve SMS bildirimleri almayı kabul etmiş olursunuz.
+                </div>
+                <ul>
+                    <li><strong>Kapsam:</strong> Mesajlar tamamen bilgilendirme amaçlı olup aracınızın hazır olduğunu bildirir.</li>
+                    <li><strong>İptal/Çıkış:</strong> Bildirim almak istemeyen müşterilerimiz teslimat esnasında personele bildirebilir veya <a href="mailto:semihcakir04@gmail.com">semihcakir04@gmail.com</a> adresine e-posta gönderebilir.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>4. Müşteri Sorumlulukları</h2>
+                <ul>
+                    <li>Doğru telefon numarası ve araç plaka bilgisi sağlamak,</li>
+                    <li>Araç içerisinde değerli eşya, nakit para vb. bırakmamak (araç teslim edilmeden önce alınmalıdır),</li>
+                    <li>Araç hazır mesajı geldikten sonra makul süre içerisinde aracı teslim almak.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>5. Sorumluluk Sınırları</h2>
+                <p>
+                    İşletmemiz azami özeni göstermekle birlikte: Araç içinde unutulan değerli eşyalardan, önceden var olan boya/kaporta hasarlarından ve telekomünikasyon/Meta sunucu kesintilerinden kaynaklanan mesaj gecikmelerinden sorumlu tutulamaz.
+                </p>
+            </div>
+
+            <div class="card">
+                <h2>6. İletişim Bilgileri</h2>
+                <p>Hizmet şartlarımızla ilgili soru ve geri bildirimleriniz için:</p>
+                <div class="contact-card">
+                    <p><strong>Hizmet:</strong> Oto Yıkama Otomasyonu & WhatsApp Bildirim Sistemi</p>
+                    <p><strong>Yetkili / Geliştirici:</strong> Semih Çakır</p>
+                    <p><strong>E-posta:</strong> <a href="mailto:semihcakir04@gmail.com">semihcakir04@gmail.com</a></p>
+                    <p><strong>Konum:</strong> Türkiye</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2026 Car Wash Automation. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function setLanguage(lang) {
+            const contentEn = document.getElementById('content-en');
+            const contentTr = document.getElementById('content-tr');
+            const btnEn = document.getElementById('btn-en');
+            const btnTr = document.getElementById('btn-tr');
+            const headerTitle = document.getElementById('header-title');
+            const headerDesc = document.getElementById('header-desc');
+
+            if (lang === 'tr') {
+                contentEn.classList.add('hidden');
+                contentTr.classList.remove('hidden');
+                btnEn.classList.remove('active');
+                btnTr.classList.add('active');
+                headerTitle.textContent = 'Hizmet Şartları ve Kullanım Koşulları';
+                headerDesc.textContent = 'Oto Yıkama Otomasyonu & Otomatik Bildirim Hizmetleri';
+            } else {
+                contentTr.classList.add('hidden');
+                contentEn.classList.remove('hidden');
+                btnTr.classList.remove('active');
+                btnEn.classList.add('active');
+                headerTitle.textContent = 'Terms of Service';
+                headerDesc.textContent = 'Car Wash Management System & Automated Notification Services';
+            }
+        }
+    </script>
+
+</body>
+</html>

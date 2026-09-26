@@ -185,9 +185,38 @@
             display: none;
         }
 
+        .nav-links {
+            position: absolute;
+            top: 18px;
+            left: 20px;
+        }
+
+        .nav-link {
+            color: #ffffff;
+            background: rgba(255, 255, 255, 0.15);
+            padding: 6px 14px;
+            border-radius: 8px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.2s ease;
+        }
+
+        .nav-link:hover {
+            background: rgba(255, 255, 255, 0.25);
+            text-decoration: none;
+        }
+
         @media (max-width: 600px) {
             header {
-                padding-top: 65px;
+                padding-top: 75px;
+            }
+            .nav-links {
+                top: 12px;
+                left: 12px;
             }
             header h1 {
                 font-size: 1.7rem;
@@ -205,6 +234,9 @@
 <body>
 
     <header>
+        <div class="nav-links">
+            <a href="terms-of-service.html" class="nav-link">Terms of Service &rarr;</a>
+        </div>
         <div class="lang-switch">
             <button class="lang-btn active" id="btn-en" onclick="setLanguage('en')">English</button>
             <button class="lang-btn" id="btn-tr" onclick="setLanguage('tr')">Türkçe</button>
